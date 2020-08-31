@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kerala Tourism</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <!-- Compiled and minified Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/mycssfiles/index.css" />
+  </head>
+
+  <body>
+    <!-- START : Top Navbar -->
+    <header class="header" id="home">
+      <div class="navbar navbar-fixed scrollspy">
+        <nav id="myNav">
+          <div class="nav-wrapper">
+            <!-- START : Navbar trigger for small screens -->
+            <a
+              href="#"
+              data-target="mobileSideNav"
+              class="right sidenav-trigger"
+            >
+              <i class="material-icons"> menu_open </i>
+            </a>
+            <ul class="navbar hide-on-med-and-down" id="nav-mobile">
+              <li>
+                <a href="#home" class="white-text hoverable"> Home </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- START : Top Navbar menu items for small screens -->
+      <ul class="sidenav" id="mobileSideNav" style="width: 200px">
+        <!-- START : Small screen Navbar links -->
+        <li>
+          <a href="#home" class="white-text hoverable"> Home </a>
+        </li>
+      </ul>
+      <!-- END : Top Navbar menu items for small screens -->
+    </header>
+    <main id="myContents">
+      <div class="section">
+        <br /><br />
+        <h3 class="header center white-text">Welcome to Kerala Tourism</h3>
+        <div class="row center">
+          <h6 class="header col s12 light white-text">
+            Please Sign In or Sign Up to continue
+          </h6>
+        </div>
+        <div class="row center">
+          <a
+            href="/myhtmlfiles/signIn.html"
+            class="btn btn-grad waves-effect waves-light hoverable"
+          >
+            Sign In
+          </a>
+        </div>
+        <div class="row center white-text">
+          <h6>OR</h6>
+        </div>
+        <div class="row center">
+          <a
+            href="/myhtmlfiles/signUp.html"
+            class="btn btn-grad waves-effect waves-light hoverable"
+          >
+            Sign Up
+          </a>
+        </div>
+        <br /><br />
+      </div>
+
+      <div id="about" class="section scrollspy">
+        <div class="container">
+          <div class="card-panel z-depth-5">
+            <div class="center row col s3">
+              <h4>About Us</h4>
+            </div>
+            <div class="center row col s12">
+              <p class="flow-text">
+                Kerala is renowned for some of its unique cultural and
+                geographical characteristics. The practices and traditions
+                handed down from generation to generation, alongside some of the
+                natural wonders that we have been blessed with have attracted
+                people to this land for centuries. From the ancient healthcare
+                system ofAyurveda to our picturesque hill stations and diverse
+                wildlife, we provide you with links to access a wide range of
+                our specialities. We believe it is our duty to share these gifts
+                with the rest of the world. These specialities of God’s Own
+                Country that are linked below shall be useful in narrowing the
+                search and guiding you to your preferred destination along with
+                providing the requisite information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <h6 class="white-text container">Copyright &copy; Kerala Tourism</h6>
+      </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Auto Init allows to initialize all of the Materialize Components with a single function call -->
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var instances = M.AutoInit();
+        // Initialize Top Navbar as side navbar in small screens
+        var mobileElems = document.querySelectorAll("#mobileSideNav");
+        var mobileSideNavInstances = M.Sidenav.init(mobileElems, {
+          closeOnClick: true,
+          menuWidth: 200,
+          edge: "right",
+          draggable: true,
+        });
+        // Initialize Scrollspy
+        var scrollspyElems = document.querySelectorAll(".scrollspy");
+        var scrollspyInstances = M.ScrollSpy.init(scrollspyElems);
+      });
+    </script>
+  </body>
+</html>

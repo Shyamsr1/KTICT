@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kerala Tourism</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Import Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <!-- Compiled and minified Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/mycssfiles/index.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="navbar navbar-fixed">
+        <nav id="myNav">
+          <div class="nav-wrapper">
+            <a
+              href="#"
+              data-target="mobileSideNav"
+              class="right sidenav-trigger"
+            >
+              <i class="material-icons"> menu_open </i>
+            </a>
+            <ul class="navbar hide-on-med-and-down" id="nav-mobile">
+              <li>
+                <a href="/myhtmlfiles/homeBeforeSignIn.html"> Home </a>
+              </li>
+            </ul>
+            <!-- END : Top Navbar menu items for large screens -->
+          </div>
+        </nav>
+      </div>
+      <ul class="sidenav" id="mobileSideNav" style="width: 200px">
+        <li>
+          <a href="/myhtmlfiles/homeBeforeSignIn.html"> Home </a>
+        </li>
+      </ul>
+    </header>
+    <main id="myContents">
+      <div id="signIn" class="section">
+        <div class="container">
+          <div class="card-panel z-depth-5">
+            <div class="row">
+              <div class="col s12 m6">
+                <h4 class="center">Sign Up</h4>
+                <form
+                  name="signUpForm"
+                  action="/myhtmlfiles/signIn.html"
+                  autocomplete="off"
+                  onsubmit="return validateSignUpForm()"
+                >
+                  <div class="input-field hoverable">
+                    <input
+                      name="signUp_FirstName"
+                      id="signUpFirstName"
+                      type="text"
+                      class="validate"
+                      placeholder="first name"
+                    />
+
+                    <span
+                      class="helper-text right-align"
+                      id="signUpFirstNameHelper"
+                    ></span>
+                  </div>
+                  <div class="input-field hoverable">
+                    <input
+                      name="signUp_LastName"
+                      id="signUpLastName"
+                      type="text"
+                      class="validate"
+                      placeholder="last name"
+                    />
+
+                    >
+                    <span
+                      class="helper-text right-align"
+                      id="signUpLastNameHelper"
+                    ></span>
+                  </div>
+                  <div class="row">
+                    <div class="col s8 offset-s2">
+                      <fieldset
+                        style="
+                          border-style: solid;
+                          border-width: 1px;
+                          border-color: white;
+                          border-radius: 15px;
+                        "
+                      >
+                        <legend class="white-text">Gender</legend>
+                        <label>
+                          <input
+                            class="with-gap"
+                            name="signUp_Gender"
+                            type="radio"
+                            value="Male"
+                            id="signUpGenderMale"
+                          />
+                          <span class="white-text hoverable">Male</span>
+                        </label>
+                        <label>
+                          <input
+                            class="with-gap"
+                            name="signUp_Gender"
+                            type="radio"
+                            value="Female"
+                            id="signUpGenderFemale"
+                          />
+                          <span class="white-text hoverable">Female</span>
+                        </label>
+                        <label>
+                          <input
+                            class="with-gap"
+                            name="signUp_Gender"
+                            type="radio"
+                            value="Others"
+                            id="signUpGenderOthers"
+                          />
+                          <span class="white-text hoverable">Others</span>
+                        </label>
+                      </fieldset>
+                    </div>
+                    <div class="col s2">
+                      <br />
+                      <br />
+                      <span
+                        class="helper-text right-align"
+                        id="signUpGenderHelper"
+                        style="font-size: 12px"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="input-field hoverable">
+                    <i class="material-icons prefix"> date_range </i>
+                    <input
+                      name="sigUp_DoB"
+                      id="sigUpDoB"
+                      type="text"
+                      class="datepicker"
+                    />
+                    <label for="sigUpDoB" class="white-text"
+                      >Date of Birth</label
+                    >
+                    <span
+                      class="helper-text right-align"
+                      id="sigUpDoBHelper"
+                    ></span>
+                  </div>
+                  <div class="input-field hoverable">
+                    <i class="material-icons prefix"> account_circle </i>
+                    <input
+                      name="signUp_Username"
+                      id="signUpUsername"
+                      type="text"
+                      class="validate"
+                      placeholder="username"
+                    />
+
+                    <span
+                      class="helper-text right-align"
+                      id="signUpUsernameHelper"
+                    ></span>
+                  </div>
+                  <div class="input-field hoverable">
+                    <i class="material-icons prefix"> alternate_email </i>
+                    <input
+                      name="signUp_Email"
+                      id="signUpEmail"
+                      type="email"
+                      class="validate"
+                      placeholder="email"
+                    />
+                    <span
+                      class="helper-text right-align"
+                      id="signUpEmailHelper"
+                    ></span>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s2">
+                      <i class="material-icons prefix"> phone </i>
+                    </div>
+                    <div class="input-field col s3">
+                      <input
+                        type="text"
+                        name="signUp_Country"
+                        id="signUpCountry"
+                        value="India"
+                        readonly
+                      />
+
+                      <span
+                        class="helper-text right-align"
+                        id="signUpISDCodeHelper"
+                      ></span>
+                    </div>
+                    <div class="input-field col s2">
+                      <input
+                        type="text"
+                        name="signUp_ISDCode"
+                        id="signUpISDCode"
+                        value="+91"
+                        readonly
+                      />
+
+                      <span
+                        class="helper-text right-align"
+                        id="signUpISDCodeHelper"
+                      ></span>
+                    </div>
+                    <div class="input-field col s5 hoverable">
+                      <input
+                        type="tel"
+                        name="signUp_Telephone"
+                        id="signUpTelephone"
+                        class="validate"
+                      />
+
+                      <span
+                        class="helper-text right-align"
+                        id="signUpTelephoneHelper"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="input-field hoverable">
+                    <i class="material-icons prefix"> lock_open </i>
+                    <input
+                      name="signUp_Password"
+                      id="signUpPassword"
+                      type="password"
+                      class="validate"
+                      onkeyup="return checkPasswordStrength();"
+                    />
+                    <label for="signUpPassword" class="white-text"
+                      >Password</label
+                    >
+                    <span
+                      class="helper-text right-align"
+                      id="signUpPasswordHelper"
+                    ></span>
+                    <div class="row">
+                      <div class="col s4 offset-s1 valign-wrapper">
+                        <span class="helper-text white-text center-align"
+                          >Password Strength Meter :</span
+                        >
+                      </div>
+                      <div class="col s7">
+                        <div id="modded">
+                          <div class="progress grey lighten-1 hoverable">
+                            <span id="complexity">Password Strength</span>
+                            <div
+                              id="scorebar"
+                              class="determinate"
+                              style="
+                                width: 0%;
+                                animation: grow 3s;
+                                background-color: maroon;
+                              "
+                            >
+                              0%
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-field hoverable">
+                    <i class="material-icons prefix"> check_circle </i>
+                    <input
+                      name="signUp_ConfirmPassword"
+                      id="signUpConfirmPassword"
+                      type="password"
+                      class="validate"
+                    />
+                    <label for="signUpConfirmPassword" class="white-text"
+                      >Confirm Password</label
+                    >
+                    <span
+                      class="helper-text right-align"
+                      id="signUpConfirmPasswordHelper"
+                    ></span>
+                  </div>
+                  <div class="row">
+                    <div class="col s6 center">
+                      <button
+                        class="btn btn-grad waves-effect waves-light hoverable"
+                        type="submit"
+                      >
+                        Submit
+                        <i class="material-icons right">input</i>
+                      </button>
+                    </div>
+                    <div class="col s6 center">
+                      <button
+                        class="btn btn-grad waves-effect waves-light hoverable"
+                        type="reset"
+                      >
+                        Reset
+                        <i class="material-icons right">refresh</i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div class="col s12 m6 center">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <p>Already a member?</p>
+                <br />
+                <a
+                  href="/myhtmlfiles/signIn.html"
+                  class="btn btn-grad waves-effect waves-light hoverable"
+                >
+                  Sign In
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <h6 class="container">Copyright &copy; Kerala Tourism</h6>
+      </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var instances = M.AutoInit();
+        var mobileElems = document.querySelectorAll("#mobileSideNav");
+        var mobileSideNavInstances = M.Sidenav.init(mobileElems, {
+          closeOnClick: true,
+          menuWidth: 200,
+          edge: "right",
+          draggable: true,
+        });
+
+        //Initialize Datepicker
+        var dateElems = document.querySelectorAll(".datepicker");
+        var dateInstances = M.Datepicker.init(dateElems, {
+          showDaysInNextAndPreviousMonths: true,
+          showMonthAfterYear: true,
+        });
+        // Initialize Select
+        var selectElems = document.querySelectorAll("select");
+        var selectInstances = M.FormSelect.init(selectElems);
+      });
+    </script>
+    <script src="/myjsfiles/formsValidate.js"></script>
+  </body>
+</html>

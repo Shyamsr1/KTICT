@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kerala Tourism</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Import Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <!-- Compiled and minified Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/mycssfiles/index.css" />
+  </head>
+
+  <body>
+    <!-- START : Top Navbar -->
+    <header class="header">
+      <div class="navbar navbar-fixed">
+        <nav id="myNav">
+          <div class="nav-wrapper">
+            <!-- START : Navbar trigger for small screens -->
+            <a
+              href="#"
+              data-target="mobileSideNav"
+              class="right sidenav-trigger"
+            >
+              <i class="material-icons"> menu_open </i>
+            </a>
+            <ul class="navbar hide-on-med-and-down" id="nav-mobile">
+              <li>
+                <a href="/myhtmlfiles/homeBeforeSignIn.html"> Home </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- START : Top Navbar menu items for small screens -->
+      <ul class="sidenav" id="mobileSideNav" style="width: 200px">
+        <!-- START : Small screen Navbar links -->
+        <li>
+          <a href="/myhtmlfiles/homeBeforeSignIn.html"> Home </a>
+        </li>
+      </ul>
+    </header>
+    <!-- END : Top Navbar -->
+    <!-- START : Main content -->
+    <main id="myContents">
+      <!-- START :  Sign In Section -->
+      <div id="signIn" class="section">
+        <div class="container">
+          <div class="card-panel z-depth-5">
+            <div class="row">
+              <div class="col s12 m6">
+                <h4 class="center">Sign In</h4>
+                <form
+                  name="signInForm"
+                  action="/myhtmlfiles/home.html"
+                  autocomplete="off"
+                  onclick="return validateSignInForm()"
+                >
+                  <div class="input-field hoverable">
+                    <input
+                      name="signIn_Email"
+                      id="signInEmail"
+                      type="email"
+                      class="validate"
+                      placeholder="email"
+                    />
+                  </div>
+                  <div class="input-field hoverable">
+                    <input
+                      name="signIn_Password"
+                      id="signInPassword"
+                      type="password"
+                      class="validate"
+                      placeholder="password"
+                    />
+                  </div>
+                  <div class="row">
+                    <div class="col s6 center">
+                      <button
+                        class="btn btn-grad waves-effect waves-light hoverable"
+                        type="submit"
+                      >
+                        Submit
+                        <i class="material-icons right">input</i>
+                      </button>
+                    </div>
+                    <div class="col s6 center">
+                      <button
+                        class="btn btn-grad waves-effect waves-light hoverable"
+                        type="reset"
+                      >
+                        Reset
+                        <i class="material-icons right">refresh</i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div class="col s12 m6 center">
+                <br /><br /><br />
+                <p>New User?</p>
+                <br />
+                <a
+                  href="/myhtmlfiles/signUp.html"
+                  class="btn btn-grad waves-effect waves-light hoverable"
+                >
+                  Sign Up
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- END : Main content -->
+
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <h6 class="container">Copyright &copy; Kerala Tourism</h6>
+      </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Auto Init allows to initialize all of the Materialize Components with a single function call -->
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var instances = M.AutoInit();
+        // Initialize Top Navbar as side navbar in small screens
+        var mobileElems = document.querySelectorAll("#mobileSideNav");
+        var mobileSideNavInstances = M.Sidenav.init(mobileElems, {
+          closeOnClick: true,
+          menuWidth: 200,
+          edge: "right",
+          draggable: true,
+        });
+      });
+    </script>
+    <script src="/myjsfiles/formsValidate.js"></script>
+  </body>
+</html>

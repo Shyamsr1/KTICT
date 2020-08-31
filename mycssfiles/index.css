@@ -1,0 +1,70 @@
+body {
+  background-image: linear-gradient( 109.6deg,  rgba(238,58,136,1) 11.2%, rgba(128,162,245,1) 91.1% );
+  background-size: 400% 400%;
+}
+
+
+#mobileSideNav li,
+#nav-mobile li {
+  color: white;
+}
+.card-panel {
+  border-radius: 35px;
+  background-color: transparent;
+  color: white;
+}
+#myNav,
+.page-footer {
+  background: transparent;
+}
+
+
+/* Paragraph styles */
+.flow-text {
+  text-align: justify;
+  text-justify: auto;
+  font-size: 15px;
+}
+
+
+.card {
+  max-width: 400px;
+  max-height: 600px;
+ 
+  background: transparent;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+
+#modded .progress {
+  min-height: 15px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  align-items: center;
+}
+#modded .progress span {
+  position: relative;
+  float: left;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 99999;
+  font-size: x-small;
+}
+#modded .progress .determinate {
+  width: 0;
+  transition: width 1s ease-in-out;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  color: #fff;
+  text-align: right;
+  white-space: nowrap;
+  font-size: x-small;
+}
+@keyframes grow {
+  from {
+    width: 0;
+  }
+}

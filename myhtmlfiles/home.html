@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kerala Tourism</title>
+    <!-- Import Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Import Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <!-- Compiled and minified Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/mycssfiles/index.css" />
+  </head>
+
+  <body>
+    <!-- START : Top Navbar -->
+    <header class="header" id="myHeader">
+      <div class="navbar navbar-fixed scrollspy">
+        <nav id="myNav">
+          <div class="nav-wrapper">
+            <!-- START : Navbar trigger for small screens -->
+            <a
+              href="#"
+              data-target="mobileSideNav"
+              class="right sidenav-trigger"
+            >
+              <i class="material-icons"> menu_open </i>
+            </a>
+            <!-- END : Navbar trigger for small screens -->
+            <!-- START : Top Navbar menu items for large screens -->
+            <ul class="navbar hide-on-med-and-down" id="nav-mobile">
+              <li>
+                <a href="#home"> Home </a>
+              </li>
+              <li>
+                <a href="/myhtmlfiles/districts.html"> Districts </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- START : Top Navbar menu items for small screens -->
+      <ul class="sidenav" id="mobileSideNav" style="width: 200px">
+        <!-- START : Small screen Navbar links -->
+        <li>
+          <a href="#home"> Home </a>
+        </li>
+        <li>
+          <a href="/myhtmlfiles/districts.html"> Districts </a>
+        </li>
+      </ul>
+    </header>
+
+    <main id="myContents">
+      <div id="home" class="section scrollspy">
+        <div class="container">
+          <div class="card-panel z-depth-5 transparent">
+            <div class="center row col s3">
+              <h4>Kerala Tourism</h4>
+            </div>
+            <div class="center row col s12">
+              <p class="flow-text">
+                Kerala, located on the south-western tip of India, enjoys unique
+                geographical features that have made it one of the most
+                sought-after tourist destinations in Asia. Fondly referred to as
+                ‘God’s Own Country’, Kerala was selected by the National
+                Geographic Traveller as one of the 50 destinations of a lifetime
+                and one of the thirteen paradises in the world.
+                <br /><br />
+                An equable climate, serene beaches, tranquil stretches of
+                backwaters, lush hill stations and exotic wildlife are the major
+                attractions of this land. A unique advantage of Kerala is that
+                most of the destinations here are only a two - four hour drive
+                from the other.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="parallax-container z-depth-5">
+        <div class="parallax">
+          <img src="/myimages/parallax/Lions.jpg" />
+        </div>
+      </div>
+
+      <div id="home" class="section scrollspy">
+        <div class="container">
+          <div class="card-panel z-depth-5 transparent">
+            <div class="center row col s3">
+              <h4>Kerala Tourism</h4>
+            </div>
+            <div class="center row col s12">
+              <p class="flow-text">
+                Classical art forms, colourful festivals, exotic cuisine are
+                some of the cultural marvels that await travellers. Ayurveda,
+                the ancient Indian system of medicine and Panchakarma, the
+                rejuvenation therapy in Ayurveda have also helped Kerala to gain
+                a pan-global reputation as a worth-visit destination.
+                <br /><br />
+                Season never ends in Kerala, thanks to the year-long moderate
+                climate and numerous festivals and events.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="parallax-container z-depth-5">
+        <div class="parallax">
+          <img src="/myimages/parallax/vazhachal.jpg" />
+        </div>
+      </div>
+      <!-- END : Second Parallax -->
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <h6 class="container">Copyright &copy; Kerala Tourism</h6>
+      </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Auto Init allows to initialize all of the Materialize Components with a single function call -->
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var instances = M.AutoInit();
+        // Initialize Top Navbar as side navbar in small screens
+        var mobileElems = document.querySelectorAll("#mobileSideNav");
+        var mobileSideNavInstances = M.Sidenav.init(mobileElems, {
+          closeOnClick: true,
+          menuWidth: 200,
+          edge: "right",
+          draggable: true,
+        });
+
+        // Initialize Scrollspy
+        var scrollspyElems = document.querySelectorAll(".scrollspy");
+        var scrollspyInstances = M.ScrollSpy.init(scrollspyElems);
+        // Initialize Parallax
+        var parallaxElems = document.querySelectorAll(".parallax");
+        var parallaxInstances = M.Parallax.init(parallaxElems);
+        //
+      });
+    </script>
+  </body>
+</html>
